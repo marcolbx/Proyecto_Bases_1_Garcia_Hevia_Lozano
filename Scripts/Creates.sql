@@ -168,7 +168,7 @@ create table solicitud
 	references fabrica (fab_codigo)
 );
 
--- hasta aqui
+
 create table material
 (
 	mat_codigo serial not null,
@@ -182,6 +182,7 @@ create table mat_pro
 	mat_pro_codigo int not null,
 	mat_pro_precio int not null,
 	mat_pro_fecha_compra date not null,
+	mat_pro_cantidad int not null,
     fk_mat_codigo int not null,
     fk_pro_rif int not null,
 	constraint pk_mat_pro primary key(mat_pro_codigo),
@@ -206,6 +207,7 @@ create table tip_mat
 	tip_mat_codigo int not null,
     fk_mat_codigo int not null,
     fk_tip_codigo int not null,
+    tip_mat_cantidad int not null,
 	constraint pk_tip_mat primary key(tip_mat_codigo),
 	constraint fk_mat_codigo foreign key(fk_mat_codigo)
 	references material(mat_codigo),
@@ -217,6 +219,7 @@ create table inventario
 (
 	inv_codigo int not null,
     fk_fab_codigo int not null,
+    inv_descripcion varchar(60) not null,
 	constraint pk_inventario primary key(inv_codigo),
 	constraint fk_fabrica foreign key(fk_fab_codigo)
 	references fabrica(fab_codigo)
@@ -227,7 +230,6 @@ create table pieza
 	pie_codigo int not null,
 	pie_fecha_estimada date,
 	pie_fecha_entregada date,
-	pie_estado varchar(30) not null,
     fk_fab_codigo int not null,
     fk_inv_codigo int not null,
     fk_aer_codigo int not null,
@@ -273,7 +275,6 @@ create table pru_mat
 (
 		pru_mat_codigo int not null,
 		pru_mat_fecha_realizacion date,
-		pru_mat_estatus varchar(15) not null,
     	fk_pru_codigo int not null,
     	fk_mat_codigo int not null,
 		constraint pk_pru_mat primary key(pru_mat_codigo),
@@ -287,7 +288,6 @@ create table pru_pie
 (
 	pru_pie_codigo int not null,
 	pru_pie_fecha_realizacion date,
-	pru_pie_estatus varchar(15) not null,
     fk_pru_codigo int not null,
     fk_pie_codigo int not null,
 	constraint pk_pru_pie primary key(pru_pie_codigo),
@@ -309,7 +309,7 @@ create table mat_inv
 	references material(mat_codigo),
 	constraint fk_inv foreign key(fk_inv_codigo)
 	references inventario(inv_codigo)
-);
+);	
 
 create table per_pru_pie
 (
@@ -326,5 +326,37 @@ create table per_pru_pie
 	 references pieza(pie_codigo)
 );
 
+create table estatus
+(	
+	 est_codigo int not null,
+	 est_nombre varchar(15) not null,
+	 constraint pk_est_codigo primary key(est_codigo)
+);
+
+create table pru_pie_est
+(
+	 pru_pie_est_codigo int not null,
+	 pru_pie_est_completado bit,
+	 fk_pru_pie_codigo int not null,
+	 fk_est_codigo int not null,
+	 constraint pk_pru_pie_est_codigo primary key(pru_pie_est_codigo),
+	 constraint fk_pru_pie foreign key (fk_pru_pie_codigo)
+	 references pru_pie(pru_pie_codigo),
+	 constraint fk_est foreign key (fk_est_codigo)
+	 references estatus(est_codigo)
+);
+
+create table pru_mat_est
+(
+	 pru_mat_est_codigo int not null,
+	 pru_mat_est_completado bit,
+	 fk_mat_codigo int not null,
+	 fk_est_codigo int not null,
+	 constraint pk_pru_mat_est_codigo primary key(pru_mat_est_codigo),
+	 constraint fk_mat foreign key (fk_mat_codigo)
+	 references material(mat_codigo),
+	 constraint fk_est foreign key (fk_est_codigo)
+	 references estatus(est_codigo)
+);
 
 
