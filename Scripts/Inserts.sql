@@ -1519,7 +1519,7 @@ INSERT INTO fabrica (fab_codigo, fab_nombre, fk_lug_codigo) VALUES
 --DELETE FROM zona;
 INSERT INTO zona (zon_codigo, zon_nombre, zon_descripcion, fk_fab_codigo) VALUES
 (1 , 'zona de ensamble principal de aviones', 'zona donde se ensamblan los aviones', 1),
-(2 , 'zona de pintura', 'zona donde se pintan los aviones', ),
+(2 , 'zona de pintura', 'zona donde se pintan los aviones', 1),
 (3, 'zona de acabado interior', 'zona donde se ensamblan los elementos del interior del avion', 2),
 (4, 'zona de despacho', 'zona donde se despachan' , 3),
 (5, 'zona de ensamble', 'zona donde se ensamblan las piezas', 3),
@@ -1601,6 +1601,60 @@ INSERT INTO modelo_aeronave (mod_nombre) VALUES
 ('AU747Platinum'),
 ('AU747Gold'),
 ('AU747Silver'),
-('AU747SilverB'),
+('AU747SilverB');
 
 INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
+(1,'Capacidad'),
+(2,'Longitud'),
+(3,'Envergadura'),
+(4,'Altura'),
+(5,'Peso Vacío'),
+(6,'Peso Máximo al despegue'),
+(7,'Planta Motriz'),
+(8,'Empuje Normal'),
+(9,'Velocidad crucero(Vc)'),
+(10,'Velocidad Máxima operativo(Vno)'),
+(11,'Alcance'),
+(12,'Tripulacion'),
+(13,'Superficie alar'),
+(14,'Techo de servicio'),
+(15,'Régimen de ascenso),
+(16,'Distance entre asientos'),
+(17,'Ancho de los asientos'),
+(18,'Flecha alar'),
+(19,'Ancho del fuselaje'),
+(20,'Alto del fuselaje'),
+(21,'Alto de la cabina'),
+(22,'Peso de aterrizaje máximo'),
+(23,'Volumen de carga'),
+(24,'Carrera de despegue con peso máximo'),
+(25,'Alcance con carga máxima'),
+(26,'Velocidad máxima'),
+(27,'Máxima capacidad de combustible'),
+(28,'Motores(x2)'),
+(29,'Empuje máximo(x2)),
+(30,'Empuje a velociad),
+(31,'Empuje velocidad crucero'),
+(32,'Diámetro de los álabes o las aspas del motor'),
+(33,'Longitud del motor'),
+(34,'Tripulación en la cabina del piloto'),
+(35,'Autonomía con peso máximo al despegue'),
+(36,'Motorización'),
+(37,'Empuje unitario');
+ --Capacidad de pasajeros típica es o no es????? 
+ 
+ INSERT INTO mod_car (mod_car_valor,fk_mod_codigo,fk_car_codigo) VALUES
+ (179,1,1); --CAPACIDADES ( hay clase densa,alta densa, estandar... varios tipos de clases, 
+ (189,5,1);
+ (118,
+ 
+ 
+ (44.1,'metros',1,2); --Longitudes
+ (46.7,'metros',5,2);
+ (28.6,'metros',6,2);
+ (36.5,'metros',7,2);
+ (31.1,'metros',8,2);
+ (31.2,'metros',9,2);
+ (33.6,'metros',10,2);
+ (39.5,'metros',11,2);
+ (42.1,'metros',12,2); ---LLegamos hasta el AU802F
