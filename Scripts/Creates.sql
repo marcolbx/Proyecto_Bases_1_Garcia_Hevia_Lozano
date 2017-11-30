@@ -131,7 +131,8 @@ create table caracteristica
 create table mod_car
 (
 	mod_car_codigo serial not null,
-	mod_car_valor int not null,
+	mod_car_valor real not null, --Lo cambiamos porque las medidas puedes ser: 44,1 
+	mod_car_descripcion varchar(50), --Se puso para determinar la medida ej: (cm, metros, etc)
 	fk_mod_codigo int not null,
 	fk_car_codigo int not null,
 	constraint pk_mod_car primary key(mod_car_codigo,fk_mod_codigo,fk_car_codigo),
