@@ -1541,34 +1541,41 @@ INSERT INTO beneficiario (ben_ci,ben_nombre,ben_apellido_1,ben_apellido_2,ben_pa
 (20012122,'Joneyver','Granados','Granados','Hijo',474,10909899);
 
 INSERT INTO proveedor (pro_rif,pro_nombre,pro_monto_acreditado,pro_fecha_inicio,fk_lug_codigo) VALUES 
-(62323333,Sidor,200000,01/01/2006,545),
-(71231233,Ferretotal,400000,01/02/2010,382),
-(90001234,Hierros de Venezuela,600000,01/11/2011,1003),
-(81231123,MetalesBE,800000,01/03/2007,975),
-(100000000,PizzaHut,10000,01/0/4/2007,10),
-(51231233,Adecos4ever,300000,01/02/2010,30),
-(121222222,4ever71,2000000,02/03/2011,45),
-(98787781,HundundKatze,1000000,01/06/2012,97),
-(200000000,Ornitorrinco y Herreria,500000,01/10/2013,150),
-(140101233,PhineasyFerb Inc,35000,10/11/2015,650),
-(56701233,ElectroLux,17500,11/11/2011,766),
-(69191200,Las Chicas Super Ensambladoras,180090,12/12/2016),
-(78900010,Los Repuestos de Mickey,1000500,03/10/2015),
-(123233244,El Señor de los Tornillos,97500,04/08/2010),
-(103307782,HP y los asientos filosofales,30000,03/05/2011),
-(178880988,The tool games,50000,01/01/2012),
-(34564567,The Controlix,10000,01/09/2013),
-(122342123,Edson y Agregados,15000,01/10/2014),
-(201321231,Las Hevias,23520,02/10/2015),
-(12343564,Los Lozanos,12000,01/11/2016),
-(98767657,Los Cauchos de Alex,1000,02/04/2013);
+(62323333,'Sidor',200000,'01/01/2006',545),
+(71231233,'Ferretotal',400000,'01/02/2010',382),
+(90001234,'Hierros de Venezuela',600000,'01/11/2011',1003),
+(81231123,'MetalesBE',800000,'01/03/2007',975),
+(100000000,'PizzaHut',10000,'01/0/4/2007',10),
+(51231233,'Adecos4ever',300000,'01/02/2010',30),
+(121222222,'4ever71',2000000,'02/03/2011',45),
+(98787781,'HundundKatze',1000000,'01/06/2012',97),
+(200000000,'Ornitorrinco y Herreria',500000,'01/10/2013',150),
+(140101233,'PhineasyFerb Inc',35000,'10/11/2015',650),
+(56701233,'ElectroLux',17500,'11/11/2011',766),
+(69191200,'Las Chicas Super Ensambladoras',180090,'12/12/2016',34),
+(78900010,'Los Repuestos de Mickey',1000500,'03/10/2015',43),
+(123233244,'El Señor de los Tornillos',97500,'04/08/2010',87),
+(103307782,'HP y los asientos filosofales',30000,'03/05/2011',97),
+(178880988,'The tool games',50000,'01/01/2012',102),
+(34564567,'The Controlix',10000,'01/09/2013',120),
+(122342123,'Edson y Agregados',15000,'01/10/2014',201),
+(201321231,'Las Hevias',23520,'02/10/2015',301),
+(12343564,'Los Lozanos',12000,'01/11/2016',303),
+(98767657,'Los Cauchos de Alex',1000,'02/04/2013',201);
 
 INSERT INTO cliente (cli_rif,cli_nombre,cli_monto_acreditado,cli_fecha_inicio,fk_lug_codigo) VALUES
-(123336666,Avior,2000000,10/12/2010,78),
-(99090987,Avianca,3000000,10/01/2011,78),
-(123447677,Aeropostal,3500000,01/01/2011,80),
-(90812312,Sta Barbara,3000000,01/01/2011,1000),
-(12312333,Mexicana de Aviacion,2500000,01/12/2010,987);
+(123336666,'Avior',2000000,'10/12/2010',78),
+(99090987,'Avianca',3000000,'10/01/2011',78),
+(123447677,'Aeropostal',3500000,'01/01/2011',80),
+(123336686,'Viasa',1000000,'01/06/2012',100),
+(223399666,'Aserca Airlines','15/08/2011',202),
+(523436896,'Laser','15/10/2010',40),
+(98813312,'Venezolana','15/04/2011',55),
+(145536686,'Conviasa','01/12/2012',71),
+(177738686,'Iberia','15/04/2011',59),
+(275638686,'Rutaca','01/12/2011',78),
+(90812312,'Santa Barbara Airlines',3000000,'01/01/2011',1000),
+(12312333,'Mexicana de Aviacion',2500000,'01/12/2010',987);
 
 INSERT INTO informacion_contacto (inf_valor,inf_tipo,fk_pro_rif,fk_per_ci,fk_cli_rif,fk_ben_ci) VALUES
 ('04141209985', 'telefono', NULL, 19080988, NULL, NULL),
@@ -1577,3 +1584,23 @@ INSERT INTO informacion_contacto (inf_valor,inf_tipo,fk_pro_rif,fk_per_ci,fk_cli
 ('@CauchosAlex', 'Twitter', 98767657, NULL, NULL, NULL), 
 ('@aviancaAirlines', 'Instagram', NULL, NULL, 99090987, NULL);
 
+INSERT INTO modelo_aeronave (mod_nombre) VALUES
+('AU80'),
+('AU80-2'), --Por sia cosa
+('AU80-700'), -- Por si acaso
+('AU87A'),
+('AU801'),
+('AU802'),
+('AU802A'),
+('AU802B'),
+('AU802C'),
+('AU802D'),
+('AU802E'),
+('AU802F'),
+('AU747Plus'),
+('AU747Platinum'),
+('AU747Gold'),
+('AU747Silver'),
+('AU747SilverB'),
+
+INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
