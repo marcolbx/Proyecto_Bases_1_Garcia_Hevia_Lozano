@@ -1,5 +1,6 @@
 
 import Adaptadores.ConectorDB;
+import Dominio.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,7 +20,11 @@ public class MainClass {
     public static void main(String[] args) {
         ConectorDB c = new ConectorDB();
         c.conectar();
-        c.ejecutarInsert("insert into Lugar(lug_codigo,lug_nombre,lug_tipo) values (10000,'yo','pais')");
+        Lugar l = new Lugar(1000000,"mi casa","Pais");
+        //l.agregarADB(c);
+        l.setLug_nombre("Mi casa 2");
+        l.modificarEnDB(c);
+        c.desconectar();
         // TODO code application logic here
     }
     

@@ -7,18 +7,21 @@ package Adaptadores;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author LAB_L11
  */
 public class ConectorDB {
-    Connection conexion;
+    public Connection conexion;
     
     public void conectar(){
-            Connection conexion = null;
-            String urlDatabase =  "jdbc:postgresql://localhost:0000/sample_db"; 
+            conexion = null;
+            String urlDatabase =  "jdbc:postgresql://localhost/AirUcabPrueba"; 
             try {
                 Class.forName("org.postgresql.Driver");
                 conexion = DriverManager.getConnection(urlDatabase,  "alex", "123456");
@@ -29,16 +32,12 @@ public class ConectorDB {
             
     }
     
-    public void ejecutarInsert(String insert){
-        Statement s = null;
-         try
-        {
-            s = conexion.createStatement();
-            s.execute(insert);
-        }catch (Exception e)
-        {
-            System.out.println("Problema al consultar la base de datos 1 ");
+    public void desconectar(){
+        if(conexion!=null) try {
+            conexion.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(ConectorDB.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
     }
+
 }
