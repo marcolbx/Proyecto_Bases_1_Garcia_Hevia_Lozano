@@ -2062,3 +2062,5 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
   
   INSERT INTO pru_mat(pru_mat_codigo,pru_mat_fecha_realizacion,fk_pru_codigo,fk_mat_codigo) VALUES
   ();
+
+  
