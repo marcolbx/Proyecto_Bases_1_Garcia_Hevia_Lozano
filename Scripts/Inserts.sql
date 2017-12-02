@@ -1658,3 +1658,4 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
  (33.6,'metros',10,2);
  (39.5,'metros',11,2);
  (42.1,'metros',12,2); ---LLegamos hasta el AU802F
+  
