@@ -8,6 +8,9 @@ package Dominio;
 import Adaptadores.ConectorDB;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.sql.ResultSet;
 
 /**
  *
@@ -71,6 +74,37 @@ public class Lugar {
         }catch (SQLException ex){
            System.out.print(ex.toString());
         }
+    }
+    
+    public static List<Lugar> obtenerTodos(ConectorDB conector){
+        List<Lugar> lugares = new ArrayList<Lugar>();
+        try {
+            PreparedStatement pst = conector.conexion.prepareStatement("SELECT lug_codigo, lug_nombre , lug_tipo, fk_lug_codigo FROM lugar");
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                Lugar l = new Lugar(rs.getInt("lug_codigo"),rs.getString("lug_nombre"),rs.getString("lug_tipo"),rs.getInt("fk_lug_codigo"));
+                lugares.add(l);
+            }
+        } catch (SQLException ex) {
+            System.out.print(ex.toString());
+        }
+        return lugares;
+    }
+    
+    public static Lugar buscarPorCodigo(ConectorDB conector, int codigo){
+        Lugar l = null;
+        try {
+            PreparedStatement pst = conector.conexion.prepareStatement("SELECT lug_codigo, lug_nombre , lug_tipo, fk_lug_codigo FROM lugar WHERE lug_codigo=?");
+            pst.setInt(1, codigo);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                l = new Lugar(rs.getInt("lug_codigo"),rs.getString("lug_nombre"),rs.getString("lug_tipo"),rs.getInt("fk_lug_codigo"));
+                System.out.println(l.lug_nombre);
+            }
+        } catch (SQLException ex) {
+            System.out.print(ex.toString());
+        }
+        return l;
     }
 
     public int getLug_codigo() {

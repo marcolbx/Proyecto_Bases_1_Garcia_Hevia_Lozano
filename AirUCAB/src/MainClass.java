@@ -22,8 +22,10 @@ public class MainClass {
         c.conectar();
         Lugar l = new Lugar(1000000,"mi casa","Pais");
         //l.agregarADB(c);
-        l.setLug_nombre("Mi casa 2");
-        l.modificarEnDB(c);
+        //l.setLug_nombre("Mi casa 2");
+        //l.modificarEnDB(c);
+        //Lugar.obtenerTodos(c);
+        Lugar.buscarPorCodigo(c, 0);
         c.desconectar();
         // TODO code application logic here
     }
