@@ -1633,15 +1633,13 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
 (27,'Máxima capacidad de combustible'),
 (28,'Motores(x2)'),
 (29,'Empuje máximo(x2)'),
-(30,'Empuje a velocidad'),
-(31,'Empuje velocidad crucero'),
-(32,'Diámetro de los álabes o las aspas del motor'),
-(33,'Longitud del motor'),
-(34,'Tripulación en la cabina del piloto'),
-(35,'Autonomía con peso máximo al despegue'),
-(36,'Motorización'),
-(37,'Empuje unitario');
- --Capacidad de pasajeros típica es o no es????? 
+(30,'Empuje velocidad crucero(x2)'),
+(31,'Diámetro de los álabes o las aspas del motor'),
+(32,'Longitud del motor'),
+--(33,'Tripulación en la cabina del piloto'),--ESTO NEIN
+(33,'Autonomía con peso máximo al despegue'),
+(34,'Motorización'),
+(35,'Empuje unitario'); 
  
  INSERT INTO mod_car (mod_car_valor,fk_mod_codigo,fk_car_codigo) VALUES
  (179,1,1); --CAPACIDADES ( hay clase densa,alta densa, estandar... varios tipos de clases, 
@@ -1904,11 +1902,69 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
   (243120,'litros',17,27),
   
   (Pratt & Whitney,'JT8D-7',6,28),--'Motores(x2)
-  (CFM,'International 56-3B-2',7,29),
-  (CFM,'56-3B-1',8,29),
-  (CFM,'56-7B20',9,29),
-  (CFM,'56-7B26',10,29),
-  (CFM,'56-7B27',11,29),
-  (CFM,'56-7',12,29),
-  --Hasta AQUI
+  (CFM,'International 56-3B-2',7,28),
+  (CFM,'56-3B-1',8,28),
+  (CFM,'56-7B20',9,28),
+  (CFM,'56-7B26',10,28),
+  (CFM,'56-7B27',11,28),
+  (CFM,'56-7',12,28),
   
+  (84.5,'kN',6,29), --Empuje Maximo(2)
+  (98,'kN',7,29),
+  (89,'kN',8,29),
+  (91.6,'kN',9,29),
+  (116,'kN',10,29),
+  (121.4,'kN',11,29),
+  (121.4,'kN',12,29),
+  
+  (17.21,'kN',6,30), -- Empuje a velocidad crucero x2
+  (21.92,'kN',7,30),
+  (21.80,'kN',8,30),
+  (23.18,'kN',9,30),
+  (24.38,'kN',10,30),
+  (24.38,'kN',11,30),
+  (24.38,'kN',12,30),
+  
+  (1.12,'m',6,31), -- Diametro de los alabes
+  (1.52,'m',7,31),
+  (1.52,'m',8,31),
+  (1.55,'m',9,31),
+  (1.55,'m',10,31),
+  (1.55,'m',11,31),
+  (1.55,'m',12,31),
+  
+  (3.20,'m',6,32),--Longitud del motor
+  (2.36,'m',7,32),
+  (2.36,'m',8,32),
+  (2.51,'m',9,32),
+  (2.51,'m',10,32),
+  (2.51,'m',11,32),
+  (2.51,'m',12,32),
+  
+  (5300,'nmi',13,33), -- Autonomia con peso maximo al despegue
+  (6850,'nmi',14,33),
+  (6700,'nmi',15,33),
+  (7260,'nmi',16,33), -- sin ER
+  --(7670,'nmi',16,33), --Con ER
+  (8000,'nmi',17,33),
+  
+  (Pratt & Whitney,'JT9D-7A,Rolls-Royce,RB211-524B2',13,34),--Motorizacion(x4)
+  (PW JT9D-7R4G2,'GE CF6-50E2, RR RB211-524D4',14,34),
+  (PW JT9D-7R4G2,'GE CF6-80C2B1,RR RB211-524D4 ',15,34),
+  (P&W PW 4062,'GE CF6-80C2B5F,RR RB211-524G/H ',16,34),
+  --(GE CF6-80C2B5F,'',16,34), con ER
+  (GE GEnx-2B67,'',17,34),
+  
+  (PW 207,'kN',13,35),--Empuje Unitario
+  (RR 223,'kN',13,35), --el 2do del au747plus y asi vamos
+  (PW 244,'kN',14,35),
+  (GE 234,'kN',14,35),
+  (RR 236,'kN',14,35),
+  (PW 244,'kN',15,35),
+  (GE 247,'kN',15,35),
+  (RR 236,'kN',15,35),
+  (PW 282,'kN',16,35),
+  (GE 276,'kN',16,35),
+  (RR 265/270,'kN',16,35),
+  (GE 276,'kN',16,35), -- CON ER
+  (296,'kN',17,35),
