@@ -1619,7 +1619,7 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
 (13,'Superficie alar'),
 (14,'Techo de servicio'),
 (15,'Régimen de ascenso'),
-(16,'Distance entre asientos'),
+(16,'Distancia entre asientos'),
 (17,'Ancho de los asientos'),
 (18,'Flecha alar'),
 (19,'Ancho del fuselaje'),
@@ -1999,7 +1999,7 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
   (5,2000,'16/10/2013',4010,5,78900010);
   
   INSERT INTO tipo_pieza(tip_codigo,fk_tip_codigo,tip_nombre) VALUES --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  (1,,'Ala'),
+  (1,,'Ala'), --No se que poner en fk_tip_codigo de ninguna
   (2,,'Superficie de Sustentacion'),
   (3,,'Fuselaje'),
   (4,,'Grupo Motopropulsor'),
@@ -2048,5 +2048,17 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
   (9,'02/02/2016','10/01/2016',3,3,5,9,?),
   (10,'03/03/2016','03/03/2016',3,3,2,10,?), --6 tipos de colas
   (11,'04/04/2015','04/05/2015',4,4,4,11,?),
-  (12,'05/05/2017','05/05/2017',2,2,5,12,?),
+  (12,'05/05/2017','05/05/2017',2,2,5,12,?);
   
+  INSERT INTO tip_mod(tip_mod_codigo,tip_mod_cantidad,fk_mod_codigo,fk_tip_codigo) VALUES
+  (1,),
+  
+  INSERT INTO prueba(pru_codigo,pru_nombre,pru_descripcion) VALUES
+ (1,'Control de calidad de materiales','Consiste en comprobar el nivel optimo del material'),
+ (2,'Control de calidad de materiales por traslado','Comprueba que no hayan sufrido daños por traslado'),
+ (3,'Control de calidad de la pieza','Comprueba el nivel optimo de la pieza ensamblada'),
+ (4,'Prueba de control de ensamble','Comprueba que el ensamblaje se haya hecho satisfactoriamente'),
+ (5,'Control de calidad de piezas por traslado','Comprueba que no hayan sufrido daños por traslado'),
+  
+  INSERT INTO pru_mat(pru_mat_codigo,pru_mat_fecha_realizacion,fk_pru_codigo,fk_mat_codigo) VALUES
+  ();
