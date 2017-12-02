@@ -99,7 +99,21 @@ public class Lugar {
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
                 l = new Lugar(rs.getInt("lug_codigo"),rs.getString("lug_nombre"),rs.getString("lug_tipo"),rs.getInt("fk_lug_codigo"));
-                System.out.println(l.lug_nombre);
+            }
+        } catch (SQLException ex) {
+            System.out.print(ex.toString());
+        }
+        return l;
+    }
+    
+    public static Lugar buscarPorNombre(ConectorDB conector, String nombre){
+        Lugar l = null;
+        try {
+            PreparedStatement pst = conector.conexion.prepareStatement("SELECT lug_codigo, lug_nombre , lug_tipo, fk_lug_codigo FROM lugar WHERE lug_nombre=?");
+            pst.setString(1, nombre);
+            ResultSet rs = pst.executeQuery();
+            while (rs.next()) {
+                l = new Lugar(rs.getInt("lug_codigo"),rs.getString("lug_nombre"),rs.getString("lug_tipo"),rs.getInt("fk_lug_codigo"));
             }
         } catch (SQLException ex) {
             System.out.print(ex.toString());
