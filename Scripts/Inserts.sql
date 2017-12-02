@@ -1967,4 +1967,61 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
   (GE 276,'kN',16,35),
   (RR 265/270,'kN',16,35),
   (GE 276,'kN',16,35), -- CON ER
-  (296,'kN',17,35),
+  (296,'kN',17,35);
+  
+  INSERT INTO aeronave(aer_codigo,aer_fecha_compra,fk_cli_rif,fk_mod_codigo) VALUES 
+  (1,'24/07/2017',123336666,13), -- con los fk de clientes arriba y los fk de los modelos de arriba
+  (2,'20/08/2016',99090987,1),
+  (3,'03/02/2017',123447677,6),
+  (4,'02/02/2015',123336686,8),
+  (5,'17/10/2016',223399666,12);
+  
+  INSERT INTO solicitud(sol_codigo,sol_completada,sol_descripcion,fk_fab_codigo1,fk_fab_codigo2) VALUES
+  (1,0,'Se despacharan 55 tornillos',3,2),
+  (2,1,'Se necesita llevar a zona de ensamblaje de avion principal',2,1),
+  (3,1,'Se requiere pintura',1,1),
+  (4,0,'Se Despacharan 50 cauchos',3,1),
+  (5,1,'Se necesita llevar las piezas internas a la zona de despacho',2,3);
+  
+  INSERT INTO material(mat_codigo,mat_nombre) VALUES
+  (1,'cobre'),
+  (2,'metal'),
+  (3,'plastico'),
+  (4,'goma'),
+  (5,'madera'),
+  (6,'hierro');
+  
+  INSERT INTO mat_pro(mat_pro_codigo,mat_pro_precio,mat_pro_fecha_compra,mat_pro_cantidad,fk_mat_codigo,fk_pro_rif) VALUES
+  (1,5000,'10/03/2011',15000,1,71231233),
+  (2,10000,'05/10/2012',2375,2,81231123),
+  (3,500,'07/08/2011',1000,3,62323333),
+  (4,1000,'24/12/2012',3450,6,90001234),
+  (5,2000,'16/10/2013',4010,5,78900010);
+  
+  INSERT INTO tipo_pieza(tip_codigo,fk_tip_codigo,tip_nombre) VALUES --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  (),
+  (),
+  (),
+  (),
+  ();
+  
+  INSERT INTO tip_mat(tip_mat_codigo,fk_mat_codigo,fk_tip_codigo,tip_mat_cantidad) VALUES --!!!!!!!!!!!!!!!!!!!!!!!!
+  (),
+  (),
+  (),
+  (),
+  ();
+  
+  INSERT INTO inventario(inv_codigo,fk_fab_codigo,inv_descripcion) VALUES
+  (1,1,'Inventario de piezas para ensamblar el avion'),
+  (2,2,'Contiene tantos elementos'),
+  (3,3,'Contiene tantos materiales'),
+  (4,4,'Contiene x cantidades de piezas'),
+  (5,5,'Piezas');
+  
+  INSERT INTO pieza(pie_codigo,pie_fecha_estimada,pie_fecha_entregada,fk_fab_codigo,fk_inv_codigo,fk_aer_codigo,fk_tip_codigo,fk_pie_codigo) VALUES
+  (),
+  (),
+  (),
+  (),
+  ();
