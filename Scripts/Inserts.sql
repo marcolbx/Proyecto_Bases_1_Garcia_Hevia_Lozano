@@ -1999,11 +1999,28 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
   (5,2000,'16/10/2013',4010,5,78900010);
   
   INSERT INTO tipo_pieza(tip_codigo,fk_tip_codigo,tip_nombre) VALUES --!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  (),
-  (),
-  (),
-  (),
-  ();
+  (1,,'Ala'),
+  (2,,'Superficie de Sustentacion'),
+  (3,,'Fuselaje'),
+  (4,,'Grupo Motopropulsor'),
+  (5,,'Superficie de Control'),
+  (6,,'Alerones'),
+  (7,,'Flaps'),
+  (8,,'Spoilers'),
+  (9,,'Slats'),
+  (10,,'Estabilizadores'),
+  --Falta tren de aterrizaje
+  (11,,'Instrumentos de Control'),
+  --Elementos Internos: 
+  (12,,'Asientos'),
+  --ETC
+  
+  --ESTO DE ABAJO NO
+  (1, 'Catia la Mar', 1344),
+(2, 'Valencia', 115),
+(3, 'Maracay', 61),
+(4,	'Guatire', 1014),
+(5, 'Planta de Colon', 343);
   
   INSERT INTO tip_mat(tip_mat_codigo,fk_mat_codigo,fk_tip_codigo,tip_mat_cantidad) VALUES --!!!!!!!!!!!!!!!!!!!!!!!!
   (),
@@ -2020,8 +2037,16 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
   (5,5,'Piezas');
   
   INSERT INTO pieza(pie_codigo,pie_fecha_estimada,pie_fecha_entregada,fk_fab_codigo,fk_inv_codigo,fk_aer_codigo,fk_tip_codigo,fk_pie_codigo) VALUES
-  (),
-  (),
-  (),
-  (),
-  ();
+  (1,'05/05/2015','06/05/2015',3,3,1,1,?),
+  (2,'10/03/2014','07/03/2014',3,3,1,2,?),
+  (3,'09/09/2016','09/09/2016',5,5,1,3,?),
+  (4,'17/11/2015','16/11/2015',1,1,1,4,?), --Grupo motopropulsor esta compuesto por: Guiñada,Cabaceo y Alabeo .Pag16
+  (5,'23/01/2014','25/01/2014',3,3,1,5,?),--Alerones/flaps entre otros?
+  (6,'14/04/2015','16/04/2015',3,3,1,6,?),
+  (7,'10/10/2016','10/10/2016',3,3,2,7,?),
+  (8,'01/01/2017','31/12/2016',3,3,4,8,?),
+  (9,'02/02/2016','10/01/2016',3,3,5,9,?),
+  (10,'03/03/2016','03/03/2016',3,3,2,10,?), --6 tipos de colas
+  (11,'04/04/2015','04/05/2015',4,4,4,11,?),
+  (12,'05/05/2017','05/05/2017',2,2,5,12,?),
+  
