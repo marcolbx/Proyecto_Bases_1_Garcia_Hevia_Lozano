@@ -1657,7 +1657,258 @@ INSERT INTO caracteristica (car_codigo,car_nombre) VALUES
  (31.2,'metros',9,2);
  (33.6,'metros',10,2);
  (39.5,'metros',11,2);
- (42.1,'metros',12,2); ---LLegamos hasta el AU802F
+ (42.1,'metros',12,2);
+  (70.66,'metros',13,2),
+ (70.66,'metros',14,2),
+ (70.66,'metros',15,2),
+ (70.66,'metros',16,2),
+ (76.4,'metros',17,2),
   
-  ();  -- Envergaduras
+ (39.9,'metros',1,3),--Envergaduras
+ (32.9,'metros',5,3),
+ (28.3,'metros',6,3), 
+ (28.9,'metros',7,3),
+ (28.9,'metros',8,3),
+ (35.7,'metros',9,3),
+ (35.7,'metros',10,3),
+ (35.7,'metros',11,3),
+ (35.7,'metros',12,3),
+ (59.64,'metros',13,3),
+ (59.64,'metros',14,3),
+ (59.64,'metros',15,3),
+ (64.4,'metros',16,3),
+ (68.5,'metros',17,3),
+  
+ (12.9,'metros',1,4), --Alturas
+ (10.4,'metros',5,4),
+ (11.3,'metros',6,4),
+ (11.1,'metros',7,4),
+ (11.1,'metros',8,4),
+ (12.6,'metros',9,4),
+ (12.5,'metros',10,4),
+ (12.5,'metros',11,4),
+ (12.5,'metros',12,4),
+ (19.3,'metros',13,4),
+ (19.3,'metros',14,4),
+ (19.3,'metros',15,4),
+ (19.4,'metros',16,4),
+ (19.4,'metros',17,4),
+  
+ (55580,'KG',1,5), --Peso Vacio
+ (46700,'KG',5,5),
+ (28120,'KG',6,5),
+ (33200,'KG',7,5),
+ (31300,'KG',8,5),
+ (36380,'KG',9,5),
+ (38150,'KG',10,5),
+ (41415,'KG',11,5),
+ (44675,'KG',12,5),
+ (162400,'KG',13,5),
+ (174000,'KG',14,5),
+ (178100,'KG',15,5),
+ (178750,'KG',16,5),-- sin ER (ver enunciado)
+-- (184600,'KG',16,5), --con ER (ver enunciado)
+ (186000,'KG',17,5),
+  
+  (116570,'KG',1,6), --Peso maximo al despegue
+  (95028,'KG',5,6),
+  (49190,'KG',6,6),
+  (68050,'KG',7,6),
+  (60550,'KG',8,6),
+  (66000,'KG',9,6),
+  (70000,'KG',10,6), --sin ER (ver enunciado
+  --(77500,'KG',10,6) con ER
+  (79000,'KG',11,6),
+  (85100,'KG',12,6),
+  (333400,'KG',13,6),
+  (378000,'KG',14,6),
+  (378000,'KG',15,6),
+  (397000,'KG',16,6), --sin ER 
+  --(413000,'KG',16,6), con ER
+  (440000,'KG',17,6),
+  
+  (,,1,7), --Plantas Motrices == motorizacion??
+  
+  (75.6,'KN',1,8),-- Empuje Normal solo estos lo tienen
+  (77,'KN',5,8),
+  
+  (907,'km/h a 1000m',5,9), --Velocidad Crucero
+  (780,'km/h',6,9),
+  (780,'km/h',7,9),
+  (780,'km/h',8,9),
+  (828,'km/h',9,9),
+  (828,'km/h',10,9),
+  (828,'km/h',11,9),
+  (823,'km/h',12,9),
+  (893,'km/h a 10500m',13,9),
+  (893,'km/h a 10500m',14,9),
+  (893,'km/h a 10500m',15,9),
+  (913,'km/h a 10500m',16,9), --sin ER
+  --(916,'km/h a 10500m',16,9), con ER
+  (916,'km/h a 10500m',17,9),
+  
+  (1000,'km/h',1,10), --Velocidad maxima operativa Vno) solo esta
+  
+  (6820,'km',1,11), --Alcance solo estos
+  (4450,'km',5,11),
+  
+  (7,'Tripulantes',5,12), -- Tripulacion
+  (6,'Pilot, copiloto y 4 auxiliares de vuelo',6,12), 
+  (6,'Pilot, copiloto y 4 auxiliares de vuelo',7,12), 
+  (6,'Pilot, copiloto y 4 auxiliares de vuelo',8,12), 
+  (6,'Pilot, copiloto y 4 auxiliares de vuelo',9,12), 
+  (6,'Pilot, copiloto y 4 auxiliares de vuelo',10,12), 
+  (6,'Pilot, copiloto y 4 auxiliares de vuelo',11,12), 
+  (6,'Pilot, copiloto y 4 auxiliares de vuelo',12,12),
+  (3,'Pilot, copiloto y 1 auxiliar de vuelo',13,12), 
+  (3,'Pilot, copiloto y 1 auxiliar de vuelo',14,12),
+  (3,'Pilot, copiloto y 1 auxiliar de vuelo',15,12),
+  (2,'Pilot y copiloto',16,12),
+  (2,'Pilot y copiloto',17,12), 
+  
+  (153,'m^2',5,13),--Superficie Alar
+  
+  (13000,'metros',5,14), --Techo de Servicio
+  (10700,'metros',6,14),
+  (11300,'metros',7,14),
+  (11300,'metros',8,14),
+  (12500,'metros',9,14),
+  (12500,'metros',10,14),
+  (12500,'metros',11,14),
+  (12500,'metros',12,14),
+  
+  (14.9,'m/s',5,15), --Regimen de Ascenso
+  
+  (76,'cm',6,16),--Distancia entre asientos (1 clase, densa)
+ -- (86,'cm',6,16),-- (1 clase, estandar)
+  (76,'cm',7,16),--1 clase densa
+  --(81,'cm',7,16),
+  (76,'cm',8,16),--1 clase densa
+  --(81,'cm',8,16),
+  (76,'cm',9,16),--1 clase densa
+  --(81,'cm',9,16),
+  (76,'cm',10,16),--1 clase densa
+  --(81,'cm',10,16),
+  (76,'cm',11,16),--1 clase densa
+  --(81,'cm',11,16),
+  (71,'cm',12,16), --1 clase, alta densidad
+  --(76,'cm',12,16), --1 clase, densa
+  --(81,'cm,12,16),--1 clase, estandar
+  
+  (43.7,'cm',6,17),--Ancho de los asientos
+  (43.7,'cm',7,17),
+  (43.7,'cm',8,17),
+  (43.7,'cm',9,17),
+  (43.7,'cm',10,17),
+  (43.7,'cm',11,17),
+  (43.7,'cm',12,17),
+  
+  (25,'',6,18),--Flecha alar FALTA PONERLE EL SIMBOLO DE GRADO
+  (25,'',7,18),
+  (25,'',8,18),
+  (25.02,'',9,18),
+  (25.02,'',10,18),
+  (25.02,'',11,18),
+  (25.02,'',12,18),
+  
+  (3.76,'metros',6,19),--Ancho del Fuselaje
+  (3.76,'metros',7,19),
+  (3.76,'metros',8,19),
+  (3.76,'metros',9,19),
+  (3.76,'metros',10,19),
+  (3.76,'metros',11,19),
+  (3.76,'metros',12,19),
+  
+  (4.01,'m',6,20), --Alto del Fuselaje
+  (4.01,'m',7,20),
+  (4.01,'m',8,20),
+  (4.01,'m',9,20),
+  (4.01,'m',10,20),
+  (4.01,'m',11,20),
+  (4.01,'m',12,20),
+  
+  (2.20,'m',6,21), --Alto de la cabina
+  (2.20,'m',7,21),
+  (2.20,'m',8,21),
+  (2.20,'m',9,21),
+  (2.20,'m',10,21),
+  (2.20,'m',11,21),
+  (2.20,'m',12,21),
+  
+  (45000,'KG',6,22),--Peso de Aterrizaje maximo
+  (56250,'KG',7,22),
+  (50000,'KG',8,22),
+  (55000,'KG',9,22),
+  (58600,'KG',10,22),
+  (66350,'KG',11,22),
+  (66350,'KG',12,22),
+  
+  (18.4,'m^3',6,23), --Volumen de carga
+  (38.9,'m^3',7,23),
+  (23.3,'m^3',8,23),
+  (21.4,'m^3',9,23),
+  (27.3,'m^3',10,23),
+  (45.1,'m^3',11,23),
+  (52.5,'m^3',12,23),
+  
+  (1990,'m',6,24),--Carrera de despegue con peso máximo
+  (2540,'m',7,24),
+  (2470,'m',8,24),
+  (2400,'m',9,24),
+  (2480,'m',10,24),
+  (2450,'m',11,24),
+  (2450,'m',12,24),
+  (3190,'m',13,24),
+  (3190,'m',14,24),
+  (3320,'m',15,24),
+  (3018,'m',16,24),--sin ER
+  (3090,'m',16,24), --con ER
+  (3090,'m',17,24),
+  
+  (1860,'nmi',6,25), --Alcance con carga maxima
+  (2165,'nmi',7,25),
+  (2400,'nmi',8,25),
+  (3050,'nmi',9,25),
+  (3365,'nmi',10,25), --Basic
+  (3900,'nmi',10,25),--WL 
+  (5375,'nmi',10,25), --ER
+  (3060,'nmi',11,25),
+  (2700,'nmi',12,25),--1 clase
+  (3200,'nmi',12,25),--2 clases
+  
+  (876,'km/h',6,26), --Velocidad Maxima
+  (876,'km/h',7,26),
+  (876,'km/h',8,26),
+  (876,'km/h',9,26),
+  (876,'km/h',10,26),
+  (876,'km/h',11,26),
+  (876,'km/h',12,26),
+  (945,'km/h',13,26),
+  (945,'km/h',14,26),
+  (945,'km/h',15,26),
+  (978,'km/h',16,26),
+  --el ultimo no tiene? jajaj
+  
+  (17860,'litros',6,27),--Máxima capacidad de combustible
+  (23170,'litros',7,27),
+  (23800,'litros',8,27),
+  (26020,'litros',9,27),
+  (26020,'litros',10,27),
+  (26020,'litros',11,27),
+  (29660,'litros',12,27),
+  (183380,'litros',13,27),
+  (199160,'litros',14,27),
+  (199160,'litros',15,27),
+  (216840,'litros',16,27),--sin ER
+  --(241140,'litros',16,27), con ER
+  (243120,'litros',17,27),
+  
+  (Pratt & Whitney,'JT8D-7',6,28),--'Motores(x2)
+  (CFM,'International 56-3B-2',7,29),
+  (CFM,'56-3B-1',8,29),
+  (CFM,'56-7B20',9,29),
+  (CFM,'56-7B26',10,29),
+  (CFM,'56-7B27',11,29),
+  (CFM,'56-7',12,29),
+  --Hasta AQUI
   
